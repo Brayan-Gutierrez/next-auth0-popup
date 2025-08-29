@@ -15,11 +15,9 @@ export default function Auth0RootProvider({
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      authorizationParams={
-        {
-          // audience: 'https://api.example.com', // opcional si usarás APIs
-        }
-      }
+      authorizationParams={{
+        audience: "https://api.example.com", // opcional si usarás APIs
+      }}
       cacheLocation="memory" // por defecto para pruebas locales es suficiente
       useRefreshTokens={true} //mejora sesión, opcional
     >
